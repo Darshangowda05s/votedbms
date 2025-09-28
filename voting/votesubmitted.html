@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voting System</title>
+<link rel="stylesheet" href="vhome.css">
+<style>
+/* --- temporary styling to match the screenshot --- */
+.success-container{
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.alert-success{
+  background:#00a651;
+  color:#fff;
+  padding:20px;
+  border-radius:4px;
+  font-size:18px;
+  margin-bottom:30px;
+  position:relative;
+}
+.alert-success::before{
+  content:"✔";
+  margin-right:8px;
+  font-weight:bold;
+}
+.view-ballot-btn{
+  background:#2d77b7;
+  color:#fff;
+  border:none;
+  padding:10px 20px;
+  border-radius:4px;
+  font-size:16px;
+  cursor:pointer;
+  text-decoration:none;
+}
+.view-ballot-btn:hover{
+  background:#245f90;
+}
+footer{
+  background:#6b6b6b;
+  color:#fff;
+  text-align:center;
+  padding:10px;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  font-size:14px;
+}
+</style>
+</head>
+<body>
+
+<header style="background:#5a5a5a;color:#fff;padding:15px;font-size:20px;">
+  <strong>ONLINE VOTING SYSTEM</strong>
+  <span style="float:right;">Erica Pearl&nbsp;&nbsp;LOGOUT</span>
+</header>
+
+<div class="success-container">
+  <h1>FR. CRCE COUNCIL ELECTION</h1>
+  <hr>
+  <div class="alert-success">
+    Success! Ballot Submitted
+  </div>
+  <p>You have already voted for this election.</p>
+  <a href="#" class="view-ballot-btn">View Ballot</a>
+</div>
+
+<footer>
+  Copyright © CGL &nbsp;&nbsp; All rights reserved
+</footer>
+
+</body>
+</html>

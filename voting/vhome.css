@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1e9d2;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #666;
+    color: white;
+    padding: 10px 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.logout {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.position {
+    background-color: #d6d0ba;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 15px;
+    width: 80%;
+}
+
+.pos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reset {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.candidates {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.candidate-card {
+    flex: 1;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.candidate-card input {
+    display: none;
+}
+
+.candidate-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.candidate-card input:checked + .content {
+    border: 2px solid #007bff;
+    border-radius: 8px;
+}
+
+.platform {
+    background: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.submit-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.close-btn {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#logout-btn {
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+}
+#logout-btn:hover {
+    background-color: rgb(22, 31, 201);
+    color: white;
+    transition: 0.5s;
+}
+
+/* ========================= */
+/*   Responsive Media Queries */
+/* ========================= */
+
+/* Tablets (portrait & below 768px) */
+@media (max-width: 768px) {
+    .position {
+        width: 95%;
+    }
+
+    .candidates {
+        justify-content: center;
+    }
+
+    .candidate-card {
+        flex: 0 1 45%;
+    }
+
+    .topbar {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* Phones (below 480px) */
+@media (max-width: 480px) {
+    .position {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .candidates {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .candidate-card {
+        flex: 1 1 100%;
+    }
+
+    .candidate-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .topbar {
+        padding: 10px;
+    }
+
+    .main-title {
+        font-size: 20px;
+    }
+}
